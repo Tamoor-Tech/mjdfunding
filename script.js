@@ -25,30 +25,37 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
   handleNavbarScroll(); // Initial check
 
-  // 3. ScrollSpy & Active Link Management
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.site-navbar .nav-link, .offcanvas-body .nav-link');
+  // 3. ScrollSpy & Active Link Management (Homepage only for anchor links)
+  const isHomepage = window.location.pathname.endsWith('index.html') || 
+                     window.location.pathname.endsWith('/') || 
+                     window.location.pathname === '';
+  
+  if (isHomepage) {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.site-navbar .nav-link, .offcanvas-body .nav-link');
 
-  const highlightNavOnScroll = () => {
-    const scrollY = window.pageYOffset + 120;
+    const highlightNavOnScroll = () => {
+      const scrollY = window.pageYOffset + 120;
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 100;
-      const sectionId = current.getAttribute('id');
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      }
-    });
-  };
-  window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${sectionId}` || href === `index.html#${sectionId}`) {
+              link.classList.add('active');
+            } else if (href && (href.startsWith('#') || href.startsWith('index.html#'))) {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    };
+    window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
+  }
 
   // Close offcanvas menu when clicking navigation links on mobile
   const offcanvasElement = document.getElementById('mobileNav');
@@ -218,6 +225,56 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.reset();
         showToast('Consultation Scheduled!', 'Thank you! Your inquiry has been routed to MJD Funding underwriting.');
       }, 1200);
+    });
+  }
+
+  // 7b. Comprehensive Application Form Handling (apply-for-funding.html)
+  const appForm = document.getElementById('mainApplicationForm');
+  if (appForm) {
+    appForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const requiredInputs = appForm.querySelectorAll('[required]');
+      let allValid = true;
+
+      requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+          allValid = false;
+          input.classList.add('is-invalid');
+        } else {
+          input.classList.remove('is-invalid');
+        }
+      });
+
+      const emailInput = document.getElementById('appEmail');
+      if (emailInput && !isValidEmail(emailInput.value.trim())) {
+        allValid = false;
+        emailInput.classList.add('is-invalid');
+      }
+
+      if (!allValid) {
+        alert('Please fill out all required fields with valid details.');
+        return;
+      }
+
+      const submitBtn = appForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Submitting Application...';
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        appForm.reset();
+        
+        // Show in-page confirmation banner if present, otherwise show toast
+        const confirmBox = document.getElementById('applicationSuccessMessage');
+        if (confirmBox) {
+          confirmBox.classList.remove('d-none');
+          confirmBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        showToast('Application Submitted!', 'Thank you. Your funding request has been queued for underwriter pre-qualification.');
+      }, 1400);
     });
   }
 
