@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.innerHTML = `
       <div class="form-toast-icon"><i class="bi bi-check-circle-fill"></i></div>
       <div>
-        <h6 class="mb-1 fw-bold text-dark" style="font-size: 0.95rem;">${title}</h6>
-        <p class="mb-0 text-muted" style="font-size: 0.85rem;">${message}</p>
+        <h6 class="mb-1 fw-bold text-white" style="font-size: 0.95rem;">${title}</h6>
+        <p class="mb-0 text-light opacity-75" style="font-size: 0.85rem;">${message}</p>
       </div>
-      <button type="button" class="btn-close ms-auto" aria-label="Close" onclick="this.parentElement.classList.remove('show')"></button>
+      <button type="button" class="btn-close btn-close-white ms-auto" aria-label="Close" onclick="this.parentElement.classList.remove('show')"></button>
     `;
 
     toast.classList.add('show');
