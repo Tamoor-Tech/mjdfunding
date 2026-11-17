@@ -327,24 +327,26 @@ img {
   left: 0;
   right: 0;
   z-index: 1040;
-  padding: 18px 0;
+  padding: 14px 0;
   transition: all var(--transition-base);
-  background: #fff;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .site-navbar.scrolled {
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.4rem;
@@ -355,17 +357,17 @@ img {
 }
 
 .navbar-logo {
-  height: 64px;
+  height: 56px;
   width: auto;
-  max-height: 64px;
+  max-height: 56px;
   object-fit: contain;
   display: block;
 }
 
 @media (max-width: 576px) {
   .navbar-logo {
-    height: 54px;
-    max-height: 54px;
+    height: 48px;
+    max-height: 48px;
   }
 }
 
@@ -395,33 +397,34 @@ img {
 }
 
 .navbar-nav {
-  gap: -3px;
+  gap: 2px;
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 0.8125rem;
-  color: #222;
-  padding: 8px 14px !important;
+  font-weight: 600;
+  font-size: 0.84rem;
+  color: #1E293B;
+  padding: 8px 12px !important;
   position: relative;
   transition: color var(--transition-fast);
   border-radius: var(--radius-xs);
   white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 2px;
-  height: 2px;
+  left: 12px;
+  right: 12px;
+  bottom: 0px;
+  height: 2.5px;
   background-color: var(--color-brand-red);
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform var(--transition-fast);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-link:hover,
@@ -440,9 +443,9 @@ img {
   gap: 8px;
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.8125rem;
-  color: #222;
-  padding: 8px 14px;
+  font-size: 0.84rem;
+  color: #1E293B;
+  padding: 7px 14px;
   border-radius: var(--radius-pill);
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -561,10 +564,15 @@ img {
   position: relative;
   background-color: var(--color-black-bg);
   background-image: 
-    radial-gradient(circle at 85% 15%, rgba(215, 28, 52, 0.13) 0%, transparent 45%),
-    radial-gradient(circle at 10% 70%, rgba(20, 20, 25, 0.7) 0%, transparent 60%);
-  padding-top: 148px;
-  padding-bottom: 92px;
+    linear-gradient(135deg, rgba(8, 10, 14, 0.94) 0%, rgba(8, 10, 14, 0.88) 50%, rgba(8, 10, 14, 0.96) 100%),
+    radial-gradient(circle at 85% 15%, rgba(215, 28, 52, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(215, 28, 52, 0.08) 0%, transparent 45%),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=85');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  padding-top: 156px;
+  padding-bottom: 96px;
   overflow: hidden;
   color: var(--color-white);
 }
@@ -836,12 +844,15 @@ img {
 
 .trust-counter {
   font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 2.7vw, 2.45rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 800;
   color: var(--color-white);
   line-height: 1.1;
   margin-bottom: 6px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
+  background: linear-gradient(180deg, #FFFFFF 30%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .trust-counter .text-red {
@@ -854,7 +865,7 @@ img {
   font-weight: 600;
   color: var(--color-text-body);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   margin-bottom: 0;
 }
 
@@ -1207,8 +1218,101 @@ img {
 }
 
 /* ==========================================================================
-   7. WHY CHOOSE MJD FUNDING (FEATURE GRID)
+   7. WHY CHOOSE MJD FUNDING (EDITORIAL LAYOUT & FEATURE GRID)
    ========================================================================= */
+
+.why-us-visual-wrap {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.why-us-img-frame {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--color-border-medium);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.7);
+}
+
+.why-us-main-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92) contrast(1.08);
+  transition: transform var(--transition-smooth);
+}
+
+.why-us-img-frame:hover .why-us-main-img {
+  transform: scale(1.03);
+}
+
+.why-us-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 10, 14, 0.1) 0%, rgba(8, 10, 14, 0.65) 100%);
+  pointer-events: none;
+}
+
+.why-floating-badge {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  background: var(--color-black-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 3px solid var(--color-brand-red);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(14px);
+  z-index: 3;
+}
+
+.why-floating-badge-secondary {
+  position: absolute;
+  top: 24px;
+  right: -12px;
+  background: var(--color-black-elevated);
+  border: 1px solid rgba(215, 28, 52, 0.35);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(14px);
+  z-index: 3;
+}
+
+.why-badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.why-badge-icon-red {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-brand-red-subtle);
+  color: var(--color-brand-red);
+  border: 1px solid rgba(215, 28, 52, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
 
 .feature-glass-card {
   background: var(--color-black-card);
@@ -1376,18 +1480,59 @@ img {
   opacity: 1;
 }
 
+.carousel-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-black-elevated);
+  border: 1px solid var(--color-border-medium);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  opacity: 0.85;
+}
+
+.carousel-control-prev:hover .carousel-nav-btn,
+.carousel-control-next:hover .carousel-nav-btn {
+  background: var(--color-brand-red);
+  border-color: var(--color-brand-red);
+  color: var(--color-white);
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(215, 28, 52, 0.4);
+}
+
+@media (max-width: 991.98px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    9. OTHER FUNDING SOLUTIONS BANNER
    ========================================================================= */
 
 .solutions-banner {
-  background: linear-gradient(135deg, #0A0A0E 0%, #151113 100%);
+  background: 
+    linear-gradient(135deg, rgba(10, 10, 14, 0.95) 0%, rgba(21, 17, 19, 0.92) 100%),
+    url('https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=85');
+  background-size: cover;
+  background-position: center;
   border-radius: var(--radius-card);
   padding: 50px 44px;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(215, 28, 52, 0.28);
+  border: 1px solid rgba(215, 28, 52, 0.32);
 }
 
 .solutions-banner-glow {
