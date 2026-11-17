@@ -1091,6 +1091,31 @@ img {
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+/* Background image layer with subtle zoom on hover */
+.program-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  opacity: 0.22;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Subtle dark overlay ensuring all card text remains clearly readable */
+.program-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 16, 22, 0.78) 0%, rgba(12, 14, 18, 0.88) 50%, rgba(8, 10, 14, 0.96) 100%);
+  z-index: 1;
+  pointer-events: none;
+  transition: background 0.4s ease;
 }
 
 .program-card::before {
@@ -1103,6 +1128,7 @@ img {
   background: linear-gradient(90deg, transparent 0%, rgba(215, 28, 52, 0.6) 50%, transparent 100%);
   opacity: 0;
   transition: opacity var(--transition-base);
+  z-index: 3;
 }
 
 .program-card:hover {
@@ -1112,8 +1138,23 @@ img {
   box-shadow: var(--shadow-card-hover);
 }
 
+.program-card:hover .program-card-bg {
+  transform: scale(1.08);
+  opacity: 0.36;
+}
+
+.program-card:hover .program-card-overlay {
+  background: linear-gradient(180deg, rgba(14, 16, 22, 0.66) 0%, rgba(12, 14, 18, 0.82) 50%, rgba(8, 10, 14, 0.94) 100%);
+}
+
 .program-card:hover::before {
   opacity: 1;
+}
+
+/* Keep all card content elevated above background image & overlay */
+.program-card > *:not(.program-card-bg):not(.program-card-overlay) {
+  position: relative;
+  z-index: 2;
 }
 
 /* Featured Direct Lending Card */
@@ -1124,9 +1165,17 @@ img {
   box-shadow: 0 14px 32px -8px rgba(215, 28, 52, 0.2);
 }
 
+.program-card.featured .program-card-overlay {
+  background: linear-gradient(180deg, rgba(215, 28, 52, 0.12) 0%, rgba(14, 16, 22, 0.82) 40%, rgba(8, 10, 14, 0.97) 100%);
+}
+
 .program-card.featured:hover {
   border-color: var(--color-brand-red);
   box-shadow: 0 18px 42px -8px rgba(215, 28, 52, 0.38);
+}
+
+.program-card.featured:hover .program-card-overlay {
+  background: linear-gradient(180deg, rgba(215, 28, 52, 0.16) 0%, rgba(14, 16, 22, 0.74) 40%, rgba(8, 10, 14, 0.94) 100%);
 }
 
 .program-badge {
@@ -1142,6 +1191,7 @@ img {
   border: 1px solid rgba(215, 28, 52, 0.25);
   padding: 4px 10px;
   border-radius: var(--radius-pill);
+  z-index: 3;
 }
 
 .program-icon-wrap {
@@ -1169,17 +1219,24 @@ img {
 
 .program-title {
   font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-text-white);
+  font-weight: 750;
+  color: #FFFFFF !important;
   margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .program-desc {
   font-size: 0.9125rem;
-  color: var(--color-text-body);
+  color: #FFFFFF !important;
   line-height: 1.6;
   margin-bottom: 18px;
   flex-grow: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.program-desc strong {
+  color: #FFFFFF !important;
+  font-weight: 700;
 }
 
 .program-tags {
@@ -1192,11 +1249,12 @@ img {
 .program-tag {
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--color-text-light);
-  border: 1px solid var(--color-border-subtle);
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   padding: 3px 9px;
   border-radius: 6px;
+  backdrop-filter: blur(6px);
 }
 
 .program-link {
