@@ -93,7 +93,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 100px;
   overflow-x: hidden;
   background-color: var(--color-black-bg);
   color-scheme: dark;
@@ -603,6 +603,62 @@ img {
 .site-navbar .dropdown-item.active {
   background-color: var(--color-brand-red);
   color: var(--color-white);
+}
+
+/* Nested Dropdown Submenu Architecture */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 2px;
+  display: none;
+  min-width: 290px;
+}
+
+.dropdown-toggle-submenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.submenu-arrow {
+  font-size: 0.72rem;
+  color: var(--color-brand-red);
+  transition: transform var(--transition-fast);
+}
+
+.dropdown-submenu:hover > a .submenu-arrow {
+  transform: translateX(3px);
+}
+
+@media (min-width: 992px) {
+  /* Hover to open top dropdown */
+  .site-navbar .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    animation: fadeInDropdown 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Hover to open nested submenu */
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    animation: fadeInDropdown 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-toggle::after {
@@ -1404,6 +1460,15 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.16);
   padding: 3px 9px;
   border-radius: 6px;
+  backdrop-filter: blur(6px);
+}
+
+.program-meta-highlight {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xs);
+  padding: 6px 10px;
+  font-size: 0.8125rem;
   backdrop-filter: blur(6px);
 }
 

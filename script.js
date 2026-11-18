@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement);
     const mobileLinks = offcanvasElement.querySelectorAll('.nav-link, .btn');
     mobileLinks.forEach(link => {
+      if (link.getAttribute('data-bs-toggle') === 'collapse' || link.closest('[data-bs-toggle="collapse"]')) return;
       link.addEventListener('click', () => {
         const openedCanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
         if (openedCanvas) {

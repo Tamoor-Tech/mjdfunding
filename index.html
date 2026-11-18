@@ -87,6 +87,53 @@
                     class="bi bi-buildings-fill text-danger me-2"></i>Real Estate Loans</a></li>
               <li><a class="dropdown-item" href="small-business-loans.html"><i
                     class="bi bi-shop-window text-danger me-2"></i>Small Business Loans</a></li>
+              <li>
+                <hr class="dropdown-divider border-secondary border-opacity-25">
+              </li>
+
+              <!-- Category 1: USDA Loan Programs -->
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle-submenu" href="index.html#usda-loans">
+                  <span class="d-flex align-items-center"><i class="bi bi-patch-check-fill text-danger me-2"></i>USDA Loan Programs</span>
+                  <i class="bi bi-chevron-right ms-2 submenu-arrow"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark-custom submenu">
+                  <li><a class="dropdown-item" href="index.html#usda-bi"><i class="bi bi-buildings text-danger me-2"></i>Business & Industry (B&I)</a></li>
+                  <li><a class="dropdown-item" href="index.html#usda-reap"><i class="bi bi-sun text-danger me-2"></i>Rural Energy (REAP)</a></li>
+                  <li><a class="dropdown-item" href="index.html#usda-9003"><i class="bi bi-droplet-half text-danger me-2"></i>Section 9003 Biorefinery</a></li>
+                  <li><a class="dropdown-item" href="index.html#usda-irp-rmap"><i class="bi bi-diagram-3 text-danger me-2"></i>IRP & RMAP Micro-Financing</a></li>
+                  <li><a class="dropdown-item" href="index.html#usda-targeted"><i class="bi bi-gear-wide text-danger me-2"></i>Targeted Sector Facilities</a></li>
+                </ul>
+              </li>
+
+              <!-- Category 2: SBA Loan Programs -->
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle-submenu" href="index.html#sba-loans">
+                  <span class="d-flex align-items-center"><i class="bi bi-shield-check text-danger me-2"></i>SBA Loan Programs</span>
+                  <i class="bi bi-chevron-right ms-2 submenu-arrow"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark-custom submenu">
+                  <li><a class="dropdown-item" href="index.html#sba-7a"><i class="bi bi-briefcase text-danger me-2"></i>SBA 7(a) Loan Program</a></li>
+                  <li><a class="dropdown-item" href="index.html#sba-504"><i class="bi bi-buildings text-danger me-2"></i>SBA 504 CRE & Equipment</a></li>
+                  <li><a class="dropdown-item" href="index.html#sba-microloan"><i class="bi bi-shop text-danger me-2"></i>SBA Microloan Program</a></li>
+                  <li><a class="dropdown-item" href="index.html#sba-caplines"><i class="bi bi-arrow-repeat text-danger me-2"></i>SBA CAPLines Working Capital</a></li>
+                </ul>
+              </li>
+
+              <!-- Category 3: Agriculture & Processing Programs -->
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle-submenu" href="index.html#agri-processing">
+                  <span class="d-flex align-items-center"><i class="bi bi-tree-fill text-danger me-2"></i>Agriculture & Processing</span>
+                  <i class="bi bi-chevron-right ms-2 submenu-arrow"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark-custom submenu">
+                  <li><a class="dropdown-item" href="index.html#agri-spur"><i class="bi bi-tree text-danger me-2"></i>SPUR Program (To $175M)</a></li>
+                  <li><a class="dropdown-item" href="index.html#agri-mppep"><i class="bi bi-box-seam text-danger me-2"></i>MPPEP Processing Grants</a></li>
+                  <li><a class="dropdown-item" href="index.html#agri-mppep-catfish"><i class="bi bi-water text-danger me-2"></i>MPPEP Phase 3 Wild Catfish</a></li>
+                  <li><a class="dropdown-item" href="index.html#agri-mppep-phase4"><i class="bi bi-tools text-danger me-2"></i>MPPEP Phase 4 Equipment</a></li>
+                  <li><a class="dropdown-item" href="index.html#agri-seafood-strategy"><i class="bi bi-compass text-danger me-2"></i>America First Seafood Strategy</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -131,12 +178,60 @@
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="funding-services.html">Funding Services</a></li>
-        <li class="nav-item"><a class="nav-link ps-3 small text-muted" href="business-loans.html">↳ Business Loans</a>
+        <li class="nav-item"><a class="nav-link ps-3 small text-muted" href="business-loans.html">↳ Business Loans</a></li>
+        <li class="nav-item"><a class="nav-link ps-3 small text-muted" href="real-estate-loans.html">↳ Real Estate Loans</a></li>
+        <li class="nav-item"><a class="nav-link ps-3 small text-muted" href="small-business-loans.html">↳ Small Business Loans</a></li>
+
+        <!-- Mobile Collapsible Category 1: USDA -->
+        <li class="nav-item">
+          <a class="nav-link ps-3 small text-muted d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileUsdaCollapse" role="button" aria-expanded="false" aria-controls="mobileUsdaCollapse">
+            <span>↳ USDA Loan Programs</span>
+            <i class="bi bi-chevron-down small text-danger"></i>
+          </a>
+          <div class="collapse ps-3" id="mobileUsdaCollapse">
+            <ul class="navbar-nav py-1">
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#usda-bi">• Business & Industry (B&I)</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#usda-reap">• Rural Energy (REAP)</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#usda-9003">• Section 9003 Biorefinery</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#usda-irp-rmap">• IRP & RMAP Micro-Financing</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#usda-targeted">• Targeted Sector Facilities</a></li>
+            </ul>
+          </div>
         </li>
-        <li class="nav-item"><a class="nav-link ps-3 small text-muted" href="real-estate-loans.html">↳ Real Estate
-            Loans</a></li>
-        <li class="nav-item"><a class="nav-link ps-3 small text-muted" href="small-business-loans.html">↳ Small Business
-            Loans</a></li>
+
+        <!-- Mobile Collapsible Category 2: SBA -->
+        <li class="nav-item">
+          <a class="nav-link ps-3 small text-muted d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileSbaCollapse" role="button" aria-expanded="false" aria-controls="mobileSbaCollapse">
+            <span>↳ SBA Loan Programs</span>
+            <i class="bi bi-chevron-down small text-danger"></i>
+          </a>
+          <div class="collapse ps-3" id="mobileSbaCollapse">
+            <ul class="navbar-nav py-1">
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#sba-7a">• SBA 7(a) Loan Program</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#sba-504">• SBA 504 Real Estate & Equip</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#sba-microloan">• SBA Microloan ($50K)</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#sba-caplines">• SBA CAPLines Working Capital</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Mobile Collapsible Category 3: Agriculture & Processing -->
+        <li class="nav-item">
+          <a class="nav-link ps-3 small text-muted d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#mobileAgriCollapse" role="button" aria-expanded="false" aria-controls="mobileAgriCollapse">
+            <span>↳ Agriculture & Processing</span>
+            <i class="bi bi-chevron-down small text-danger"></i>
+          </a>
+          <div class="collapse ps-3" id="mobileAgriCollapse">
+            <ul class="navbar-nav py-1">
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#agri-spur">• SPUR Program (To $175M)</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#agri-mppep">• MPPEP Processing Grants</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#agri-mppep-catfish">• MPPEP Phase 3 Catfish</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#agri-mppep-phase4">• MPPEP Phase 4 Equipment</a></li>
+              <li class="nav-item"><a class="nav-link py-1 ps-3 text-muted small" href="index.html#agri-seafood-strategy">• America First Seafood Strategy</a></li>
+            </ul>
+          </div>
+        </li>
+
         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
       </ul>
       <div class="mt-4 pt-3 border-top border-secondary border-opacity-25">
@@ -242,6 +337,9 @@
                     <option value="direct_lending">Direct Lending (MJD Capital Partners)</option>
                     <option value="franchise">Franchise Financing</option>
                     <option value="marine_aircraft">Aircraft & Marine Financing</option>
+                    <option value="usda_loans">USDA Commercial Loan Programs</option>
+                    <option value="sba_loans">SBA Business Financing Programs</option>
+                    <option value="agri_processing">Agriculture & Food Processing Financing</option>
                   </select>
                   <label for="heroProgram">Funding Program *</label>
                 </div>
@@ -667,6 +765,516 @@
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5B. USDA COMMERCIAL LOAN & FINANCING PROGRAMS
+       ========================================================================= -->
+  <section class="section-padding bg-black-surface" id="usda-loans">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-badge badge-navy">USDA Guaranteed Lending</div>
+        <h2 class="section-title text-white">USDA Commercial Loan & Financing Programs</h2>
+        <p class="section-subtitle">
+          Government-guaranteed debt solutions for rural enterprises, energy independence, advanced biorefining, and regional agribusiness infrastructure nationwide.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. USDA B&I -->
+        <div class="col-12 col-md-6 col-lg-4" id="usda-bi" data-aos="fade-up" data-aos-delay="0">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-buildings-fill"></i>
+              </div>
+              <span class="program-badge">Guaranteed Loan</span>
+            </div>
+            <h3 class="program-title">Business & Industry (B&I) Guaranteed Loans</h3>
+            <p class="program-desc">
+              Financing for eligible rural businesses supporting commercial real estate, machinery and equipment, working capital, business acquisitions, and qualifying debt refinancing.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Up to 80% Guarantee</span>
+              <span class="program-tag">30-Yr RE Terms</span>
+              <span class="program-tag">15-Yr Equipment</span>
+              <span class="program-tag">7-Yr Working Capital</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Guarantee:</span> <strong class="text-white small">80% ≤$5M • 70% $5M–$10M • 60% &gt;$10M</strong>
+            </div>
+            <a href="apply-for-funding.html?program=usda_bi" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. REAP -->
+        <div class="col-12 col-md-6 col-lg-4" id="usda-reap" data-aos="fade-up" data-aos-delay="50">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-sun-fill"></i>
+              </div>
+              <span class="program-badge">Loan & Grant</span>
+            </div>
+            <h3 class="program-title">Rural Energy for America Program (REAP)</h3>
+            <p class="program-desc">
+              Guaranteed loans and competitive grants for renewable energy systems and energy-efficiency improvements, designed for eligible agricultural producers and rural small businesses.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Renewable Energy</span>
+              <span class="program-tag">Solar Arrays</span>
+              <span class="program-tag">Energy Efficiency</span>
+              <span class="program-tag">Agricultural Grants</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Structure:</span> <strong class="text-white small">Guaranteed Loans & Competitive Grants</strong>
+            </div>
+            <a href="apply-for-funding.html?program=usda_reap" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Section 9003 Biorefinery -->
+        <div class="col-12 col-md-6 col-lg-4" id="usda-9003" data-aos="fade-up" data-aos-delay="100">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-droplet-half"></i>
+              </div>
+              <span class="program-badge">Guaranteed Loan</span>
+            </div>
+            <h3 class="program-title">Section 9003 – Biorefinery & Renewable Chemical</h3>
+            <p class="program-desc">
+              Financing support for eligible advanced biofuel, renewable chemical, and biobased product manufacturing projects, commercializing innovative clean technologies.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Advanced Biofuel</span>
+              <span class="program-tag">Renewable Chemical</span>
+              <span class="program-tag">Biobased Products</span>
+              <span class="program-tag">Biorefineries</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Scope:</span> <strong class="text-white small">Commercial-Scale Production Facilities</strong>
+            </div>
+            <a href="apply-for-funding.html?program=usda_9003" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. IRP & RMAP -->
+        <div class="col-12 col-md-6 col-lg-6" id="usda-irp-rmap" data-aos="fade-up" data-aos-delay="150">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+              <span class="program-badge">Intermediary Financing</span>
+            </div>
+            <h3 class="program-title">Intermediary Relending (IRP) & RMAP</h3>
+            <p class="program-desc">
+              Financing deployed through eligible revolving intermediaries and microlenders to fund smaller rural businesses, local commercial enterprises, and microenterprises.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Intermediary Relending</span>
+              <span class="program-tag">Microenterprises</span>
+              <span class="program-tag">Rural Small Business</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Channel:</span> <strong class="text-white small">Eligible Revolving Intermediaries & Microlenders</strong>
+            </div>
+            <a href="apply-for-funding.html?program=usda_irp_rmap" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Targeted Sector Programs -->
+        <div class="col-12 col-md-6 col-lg-6" id="usda-targeted" data-aos="fade-up" data-aos-delay="200">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-gear-wide-connected"></i>
+              </div>
+              <span class="program-badge">Targeted Sector Support</span>
+            </div>
+            <h3 class="program-title">Targeted Sector & Facility Programs</h3>
+            <p class="program-desc">
+              Specialized financing and support including MPPEP and TPEP-related programs, dedicated to expanding domestic food processing infrastructure and regional production capacity.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">MPPEP & TPEP Aligned</span>
+              <span class="program-tag">Food Processing</span>
+              <span class="program-tag">Processing Plants</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Focus:</span> <strong class="text-white small">Ag Facility Modernization & Processing Infrastructure</strong>
+            </div>
+            <a href="apply-for-funding.html?program=usda_targeted" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 text-center">
+        <small class="text-muted fst-italic">
+          *All USDA loan and grant programs are subject to official agency guidelines, rural area eligibility requirements, environmental review, and lender underwriting.
+        </small>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5C. SBA BUSINESS FINANCING PROGRAMS
+       ========================================================================= -->
+  <section class="section-padding bg-black-bg" id="sba-loans">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-badge badge-navy">SBA Government-Guaranteed Lending</div>
+        <h2 class="section-title text-white">SBA Business Financing Programs</h2>
+        <p class="section-subtitle">
+          Preferred nationwide SBA lending structures delivering lower equity requirements, fixed interest rate protections, and extended amortization terms for qualified American enterprises.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. SBA 7(a) -->
+        <div class="col-12 col-md-6 col-lg-3" id="sba-7a" data-aos="fade-up" data-aos-delay="0">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-briefcase-fill"></i>
+              </div>
+              <span class="program-badge">Guaranteed Loan</span>
+            </div>
+            <h3 class="program-title">SBA 7(a) Loan Program</h3>
+            <p class="program-desc">
+              Financing up to $5,000,000 for working capital, equipment, real estate, business acquisitions, and qualifying refinancing. Includes SBA Express, 7(a) Small Loans, Export Express, and Export Working Capital.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Up to $5,000,000</span>
+              <span class="program-tag">Working Capital</span>
+              <span class="program-tag">Acquisitions</span>
+              <span class="program-tag">Export Express</span>
+            </div>
+            <a href="apply-for-funding.html?program=sba_7a" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. SBA 504 -->
+        <div class="col-12 col-md-6 col-lg-3" id="sba-504" data-aos="fade-up" data-aos-delay="50">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-buildings-fill"></i>
+              </div>
+              <span class="program-badge">Fixed-Rate Loan</span>
+            </div>
+            <h3 class="program-title">SBA 504 Loan Program</h3>
+            <p class="program-desc">
+              Standard financing up to $5,000,000 (and up to $5,500,000 for eligible small manufacturers and certain energy projects). Fixed-rate financing with 10, 20, or 25-year terms for commercial real estate, construction, and major equipment.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Up to $5.5M</span>
+              <span class="program-tag">10, 20, 25-Yr Terms</span>
+              <span class="program-tag">Fixed Rates</span>
+              <span class="program-tag">CRE & Equipment</span>
+            </div>
+            <a href="apply-for-funding.html?program=sba_504" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. SBA Microloan -->
+        <div class="col-12 col-md-6 col-lg-3" id="sba-microloan" data-aos="fade-up" data-aos-delay="100">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-shop"></i>
+              </div>
+              <span class="program-badge">Direct Microloan</span>
+            </div>
+            <h3 class="program-title">SBA Microloan Program</h3>
+            <p class="program-desc">
+              Financing up to $50,000 with an average loan size of approximately $13,000. Supports working capital, inventory, supplies, furniture, fixtures, and machinery. (Cannot be used to repay existing debt or purchase real estate).
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Up to $50,000</span>
+              <span class="program-tag">Avg ~$13,000</span>
+              <span class="program-tag">Supplies & Fixtures</span>
+              <span class="program-tag">Working Capital</span>
+            </div>
+            <a href="apply-for-funding.html?program=sba_microloan" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. SBA CAPLines -->
+        <div class="col-12 col-md-6 col-lg-3" id="sba-caplines" data-aos="fade-up" data-aos-delay="150">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <span class="program-badge">Revolving Credit</span>
+            </div>
+            <h3 class="program-title">SBA CAPLines</h3>
+            <p class="program-desc">
+              Designed for short-term and revolving working capital needs up to $5,000,000. Provides structured liquidity for seasonal surges, contract fulfillment, and construction lines with terms up to 10 years, subject to requirements.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Up to $5,000,000</span>
+              <span class="program-tag">Revolving Lines</span>
+              <span class="program-tag">Terms to 10 Yrs</span>
+              <span class="program-tag">Contract Liquidity</span>
+            </div>
+            <a href="apply-for-funding.html?program=sba_caplines" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 text-center">
+        <small class="text-muted fst-italic">
+          *MJD Funding facilitates financing in cooperation with premier SBA Preferred Lending Partners. Subject to SBA credit review, eligibility criteria, and agency program rules.
+        </small>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5D. AGRICULTURE & FOOD PROCESSING FINANCING
+       ========================================================================= -->
+  <section class="section-padding bg-black-surface" id="agri-processing">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-badge badge-navy">Ag & Food Processing Capital</div>
+        <h2 class="section-title text-white">Agriculture & Food Processing Financing</h2>
+        <p class="section-subtitle">
+          Guaranteed mega-debt facilities, federal capacity grants, and maritime supply-chain initiatives tailored for agricultural processors, meat and poultry facilities, and domestic seafood producers.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. SPUR -->
+        <div class="col-12 col-md-6 col-lg-4" id="agri-spur" data-aos="fade-up" data-aos-delay="0">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-tree-fill"></i>
+              </div>
+              <span class="program-badge">Guaranteed Loan</span>
+            </div>
+            <h3 class="program-title">SPUR – Supporting Producers of Underserved Regions</h3>
+            <p class="program-desc">
+              Guaranteed financing for eligible agricultural and food-sector projects. Supported by up to $5 billion in guaranteed loans, offering up to 90% lender financing, up to $175 million per project, terms up to 40 years, and possible principal & interest deferral up to two years.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Up to $175M / Project</span>
+              <span class="program-tag">Up to 90% Financing</span>
+              <span class="program-tag">40-Year Terms</span>
+              <span class="program-tag">2-Yr P&I Deferral</span>
+            </div>
+            <a href="apply-for-funding.html?program=agri_spur" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. MPPEP Expansion -->
+        <div class="col-12 col-md-6 col-lg-4" id="agri-mppep" data-aos="fade-up" data-aos-delay="50">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-box-seam-fill"></i>
+              </div>
+              <span class="program-badge">Federal Grant</span>
+            </div>
+            <h3 class="program-title">MPPEP – Meat & Poultry Processing Expansion</h3>
+            <p class="program-desc">
+              Grant support for eligible meat and poultry processing expansion. Highlights the milestone October 2026 announcement of $57,424,130 awarded across 147 tentative awards in 40 states, fostering competition and regional processing capacity.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">$57,424,130 Funding</span>
+              <span class="program-tag">147 Tentative Awards</span>
+              <span class="program-tag">40 States</span>
+              <span class="program-tag">Meat & Poultry</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Award Status:</span> <strong class="text-white small">Tentative awards subject to final agency contracting</strong>
+            </div>
+            <a href="apply-for-funding.html?program=agri_mppep" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. MPPEP Phase 3 Catfish -->
+        <div class="col-12 col-md-6 col-lg-4" id="agri-mppep-catfish" data-aos="fade-up" data-aos-delay="100">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-water"></i>
+              </div>
+              <span class="program-badge">Grant (Deadline Dec 7, 2026)</span>
+            </div>
+            <h3 class="program-title">MPPEP Phase 3 – Round 2 Seafood / Catfish</h3>
+            <p class="program-desc">
+              Grant amounts from $50,000 to the lesser of $2 million or 80% of project costs with a 20% cost share, dedicated to eligible USDA-inspected invasive wild-caught catfish processors. Application deadline: December 7, 2026.
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Deadline: Dec 7, 2026</span>
+              <span class="program-tag">$50K to $2M Grants</span>
+              <span class="program-tag">20% Cost Share</span>
+              <span class="program-tag">Invasive Catfish</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Target:</span> <strong class="text-white small">USDA-Inspected Wild-Caught Catfish Processors</strong>
+            </div>
+            <a href="apply-for-funding.html?program=agri_catfish" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. MPPEP Phase 4 -->
+        <div class="col-12 col-md-6 col-lg-6" id="agri-mppep-phase4" data-aos="fade-up" data-aos-delay="150">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-tools"></i>
+              </div>
+              <span class="program-badge">Dual Grant Options</span>
+            </div>
+            <h3 class="program-title">MPPEP Phase 4 – Expansion & Equipment</h3>
+            <p class="program-desc">
+              Two distinct grant options: <strong>Processing Expansion Grants</strong> ($50,000 to $2,000,000 with a 50% matching requirement) and <strong>Equipment-Only Grants</strong> ($10,000 to $250,000 with a 25% matching requirement).
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Expansion: $50K–$2M (50% match)</span>
+              <span class="program-tag">Equipment: $10K–$250K (25% match)</span>
+              <span class="program-tag">Equipment Grants</span>
+            </div>
+            <a href="apply-for-funding.html?program=agri_mppep4" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. America First Seafood Strategy -->
+        <div class="col-12 col-md-6 col-lg-6" id="agri-seafood-strategy" data-aos="fade-up" data-aos-delay="200">
+          <div class="program-card">
+            <div class="program-card-bg"
+              style="background-image: url('https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=800&q=80');">
+            </div>
+            <div class="program-card-overlay"></div>
+            <div class="program-card-top">
+              <div class="program-icon-wrap">
+                <i class="bi bi-compass-fill"></i>
+              </div>
+              <span class="program-badge">National Strategy</span>
+            </div>
+            <h3 class="program-title">America First Seafood Strategy</h3>
+            <p class="program-desc">
+              Supports domestic seafood production, coastal infrastructure, export growth, federal procurement priority, and the voluntary U.S. Caught Seafood label. Connected to SPUR debt financing support. (Comprehensive policy strategy, not a direct loan or grant).
+            </p>
+            <div class="program-tags">
+              <span class="program-tag">Strategic Policy</span>
+              <span class="program-tag">U.S. Caught Seafood Label</span>
+              <span class="program-tag">Connected to SPUR</span>
+              <span class="program-tag">Federal Procurement</span>
+            </div>
+            <div class="program-meta-highlight mb-3">
+              <span class="text-white-50 small">Classification:</span> <strong class="text-white small">Comprehensive federal strategy (not a direct loan or grant)</strong>
+            </div>
+            <a href="apply-for-funding.html?program=agri_seafood_strategy" class="program-link">
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 text-center">
+        <small class="text-muted fst-italic">
+          *Agriculture & processing programs are governed by respective agency announcements, federal matching standards, and legislative appropriations. Tentative awards are subject to final award agreements.
+        </small>
       </div>
     </div>
   </section>
@@ -1338,6 +1946,9 @@
                     <option value="direct_lending">Direct Lending (MJD Capital Partners)</option>
                     <option value="franchise">Franchise Financing</option>
                     <option value="marine_aircraft">Aircraft & Marine Financing</option>
+                    <option value="usda_loans">USDA Commercial Loan Programs</option>
+                    <option value="sba_loans">SBA Business Financing Programs</option>
+                    <option value="agri_processing">Agriculture & Food Processing Financing</option>
                   </select>
                 </div>
 
