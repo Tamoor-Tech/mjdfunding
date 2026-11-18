@@ -15,15 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Sticky Navbar scroll behavior
   const navbar = document.getElementById('mainNav');
-  const handleNavbarScroll = () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
-  handleNavbarScroll(); // Initial check
+  if (navbar) {
+    const handleNavbarScroll = () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+    handleNavbarScroll(); // Initial check
+  }
 
   // 3. ScrollSpy & Active Link Management (Homepage only for anchor links)
   const isHomepage = window.location.pathname.endsWith('index.html') || 
